@@ -19,7 +19,7 @@ export default function Home() {
     const fetchComics = async () => {
       const ts = new Date().getTime();
       const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString();
-      const url = `http://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+      const url = `https://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
 
       try {
         const response = await axios.get(url);
@@ -43,12 +43,12 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-8 text-center">Marvel Comics</h1>
       <div className="grid-view">
         {loading ? (
-          // Renderizar el esqueleto mientras se carga
+
           Array.from({ length: 10 }).map((_, index) => (
             <ComicSkeleton key={index} />
           ))
         ) : (
-          // Renderizar las tarjetas de cómics cuando los datos estén disponibles
+
           comics.map(comic => (
             <ComicCard
               key={comic.id}
