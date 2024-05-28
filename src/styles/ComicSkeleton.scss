@@ -8,16 +8,17 @@
 
   .skeleton-image {
     width: 100%;
-    height: 200px; // Ajusta la altura de la imagen según sea necesario
-    background-color: #ccc; // Color de fondo para la imagen del esqueleto
+    min-height: 200px;
+    height: auto;
+    background-color: #ccc;
     border-radius: 8px;
-    margin-bottom: 12px; // Espacio entre la imagen y el título
+    margin-bottom: 12px;
   }
 
   .skeleton-title {
     width: 80%;
-    height: 20px; // Ajusta la altura del título según sea necesario
-    background-color: #ccc; // Color de fondo para el título del esqueleto
+    height: 20px;
+    background-color: #ccc;
     border-radius: 4px;
   }
 
