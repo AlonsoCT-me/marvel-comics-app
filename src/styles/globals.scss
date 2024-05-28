@@ -1,0 +1,53 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  @apply font-inter bg-[#f4f4f4] m-0 p-0;
+}
+.container {
+  @apply max-w-[1200px] mx-auto my-0 p-5;
+}
+.grid-view {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5;
+}
+.header {
+  @apply bg-[#333] text-[white] px-0 py-2.5;
+}
+.nav-list {
+  @apply flex justify-between m-0 p-0;
+  list-style: none;
+}
+.nav-list li {
+  @apply mx-2.5 my-0;
+}
+.nav-list a {
+  @apply text-[white] no-underline text-[1.2rem] hover:underline;
+}
+.modal-overlay {
+  @apply fixed flex items-center justify-center inset-0;
+  background: rgba(0, 0, 0, 0.75);
+}
+.modal-image {
+  @apply object-contain;
+}
+.modal-content {
+  @apply font-inter max-w-[500px] w-full -translate-y-full animate-[slideIn_0.5s_forwards] p-5 rounded-lg;
+  background: white;
+}
+@keyframes fadeIn {
+  from {
+    @apply opacity-0;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
+@keyframes slideIn {
+  from {
+    @apply -translate-y-full;
+  }
+  to {
+    @apply translate-y-0;
+  }
+}

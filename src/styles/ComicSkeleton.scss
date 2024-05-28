@@ -1,0 +1,31 @@
+.skeleton {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    animation: loadingAnimation 1s infinite ease-in-out alternate;
+  }
+
+  .skeleton-image {
+    width: 100%;
+    height: 200px; // Ajusta la altura de la imagen según sea necesario
+    background-color: #ccc; // Color de fondo para la imagen del esqueleto
+    border-radius: 8px;
+    margin-bottom: 12px; // Espacio entre la imagen y el título
+  }
+
+  .skeleton-title {
+    width: 80%;
+    height: 20px; // Ajusta la altura del título según sea necesario
+    background-color: #ccc; // Color de fondo para el título del esqueleto
+    border-radius: 4px;
+  }
+
+  @keyframes loadingAnimation {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

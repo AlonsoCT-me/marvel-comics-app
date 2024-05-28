@@ -1,0 +1,18 @@
+.modal-overlay {
+  @apply fixed flex items-center justify-center inset-0;
+  background: rgba(0, 0, 0, 0.75);
+}
+.modal-content {
+  @apply font-inter max-w-[500px] w-full p-5 rounded-lg;
+  background: white;
+}
+.modal-image {
+  @apply w-full h-[300px] rounded;
+  aspect-ratio: 16 / 9;
+}
+.modal-title {
+  @apply font-inter text-2xl mt-4;
+}
+.modal-close-button {
+  @apply font-inter float-right rounded bg-[#dc3545] text-[white] cursor-pointer mt-4 px-5 py-2.5 border-[none];
+}
